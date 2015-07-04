@@ -4,11 +4,11 @@ Snake game clone using Python 2.7 and Tkinter GUI.
 
 ## Controls
 
-**UP DOWN LEFT RIGHT** for navigate.
+**Up Down Left Right** for navigate.
 
-**PAUSE and **SPACE** for pause.
+**Pause** and **Space** for pause.
 
-Mouse for adding borders.
+**Left Mouse Button** for adding borders.
 
 ## Screenshot
 
