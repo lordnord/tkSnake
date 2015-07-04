@@ -101,7 +101,7 @@ class Snake(object):
         # because NOMOVE blocking don't happen.
         # self.locked boolean fixes that.
 
-        if event.keysym in ('Pause', 'Space'):
+        if event.keysym in ('Pause', 'space'):
             if self.paused:
                 self.paused = False
                 self.canvas.deletetext()
