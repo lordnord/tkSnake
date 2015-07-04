@@ -1,16 +1,15 @@
-tkSnake
-=============
+# tkSnake
 
 Snake game clone using Python 2.7 and Tkinter GUI.
 
-Controls
---------
-UP DOWN LERT RIGHT for navigate
+## Controls
 
-PAUSE and SPACE for pause
+**UP DOWN LEFT RIGHT** for navigate.
 
-Mouse for adding borders
+**PAUSE and **SPACE** for pause.
 
-Screenshot
-----------
+Mouse for adding borders.
+
+## Screenshot
+
 
