@@ -11,5 +11,5 @@ Snake game clone using Python 2.7 and Tkinter GUI.
 **Left Mouse Button** for adding borders.
 
 ## Screenshot
-
+![](http://i.imgur.com/dAQ2bi6.gif)
 
