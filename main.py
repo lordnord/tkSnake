@@ -1,8 +1,6 @@
 import Tkinter as tk
 import random
 
-# with setting borders
-__version__ = '0.1 tb'
 
 NOMOVE = {
 'Left': 'Right',
@@ -17,19 +15,19 @@ DELETE = 2
 
 # TODO
 # 1. speed management
-# 3. not empty field, additional borders
+# 3. not empty field by default, additional borders
 # 5. menu configure before start
 # 6. levels and egg counter
 
 class Snake(object):
-    def __init__(self, field, color, fat, speed=0, option=None):
+    def __init__(self, field, color, fat, speed=0, flat_thorus=False):
         width, height = field.fieldsize
         assert not width % fat and not height % fat
         
         self.canvas = field
         self.fat = fat
         self.color = color
-        self.option = option
+        self.flat_thorus = flat_thorus
         self.setspeed(speed)
         self.reset()
         self.canvas.bind('<Button-1>', self.b1)
@@ -133,7 +131,7 @@ class Snake(object):
         self.body.append(coords)
         
     def gameOverCondition(self):
-        if self.option == 'T':
+        if self.flat_thorus:
             return (self.body.count(self.headcoord) == 2 or
                     tuple(self.headcoord) in self.borders)
         else:
@@ -179,7 +177,7 @@ class Snake(object):
         if self.direction == 'Left':
             self.headcoord = [x-f, y]
         
-        if self.option == 'T':
+        if self.flat_thorus:
             if y < 0: self.headcoord[1] = ymax-self.fat
             if x < 0: self.headcoord[0] = xmax-self.fat
             if ymax == y: self.headcoord[1] = 0
@@ -245,6 +243,5 @@ if __name__ == '__main__':
     root.title('Snake')
     canvas = Field(root, height=450, width=450, bg='black')
     canvas.pack()
-    # option T means flat thorus
-    Snake(canvas, color='green', fat=15, speed=7, option='T')
+    Snake(canvas, color='green', fat=15, speed=7, flat_thorus=True)
     root.mainloop()
