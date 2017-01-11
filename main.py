@@ -170,11 +170,11 @@ class Snake(object):
         f = self.fat
         if self.direction == 'Down':
             self.headcoord = [x, y+f]
-        if self.direction == 'Up':
+        elif self.direction == 'Up':
             self.headcoord = [x, y-f]
-        if self.direction == 'Right':
+        elif self.direction == 'Right':
             self.headcoord = [x+f, y]
-        if self.direction == 'Left':
+        elif self.direction == 'Left':
             self.headcoord = [x-f, y]
         
         if self.flat_thorus:
